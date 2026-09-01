@@ -11,5 +11,5 @@ public class ParkingLot extends BaseEntity{
     private List<ParkingFloor> parkingFloors;
     private List<Gate> gates;
     private List<VechicleType> supportedVechicleTypes;
-    private ParkingLotStatus parkingLotStatus;
+    private ParkingSpotStatus parkingLotStatus;
 }

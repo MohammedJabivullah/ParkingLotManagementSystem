@@ -8,5 +8,4 @@ import lombok.Setter;
 public class Vehicle extends BaseEntity{
     private String number;
     private VechicleType vehicleType;
-    private String ownerName;
 }
