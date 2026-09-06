@@ -5,6 +5,7 @@ import dev.jabivullah.parking_lot_management_system.dto.TicketResponceDto;
 import dev.jabivullah.parking_lot_management_system.service.TicketService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -12,9 +13,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class TicketController {
     private TicketService ticketService;
 
-    @GetMapping("PLMS")
+    @PostMapping("PLMS")
     public ResponseEntity<TicketResponceDto> getTicket(@RequestBody TicketRequestDto info){
-        TicketResponceDto ticket = ticketService.getTicket(info);
+        TicketResponceDto ticket = ticketService.creatTicket(info);
         return ResponseEntity.ok(ticket);
     }
 

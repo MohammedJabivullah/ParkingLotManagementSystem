@@ -10,5 +10,5 @@ import lombok.Setter;
 public class Operator extends BaseEntity{
     private String name;
     private String phoneNumber;
-    private int empId;
+    private Long empId;
 }

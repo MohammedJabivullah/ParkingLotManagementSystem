@@ -1,6 +1,6 @@
 package dev.jabivullah.parking_lot_management_system.entity;
 
-import jakarta.persistence.Entity;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -8,9 +8,12 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Gate extends BaseEntity{
-    private int gateNumber;
-    private Operator operator;
+    private String gateNumber;
+    @Enumerated(EnumType.STRING)
     private GateType gateType;
+    @Enumerated(EnumType.STRING)
     private GateStatus gateStatus;
+    @ManyToOne
+    @JoinColumn(name = "parking_lot_id")
     private ParkingLot parkingLot;
 }

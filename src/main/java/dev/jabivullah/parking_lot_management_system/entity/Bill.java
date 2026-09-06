@@ -1,6 +1,6 @@
 package dev.jabivullah.parking_lot_management_system.entity;
 
-import jakarta.persistence.Entity;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -13,8 +13,14 @@ import java.util.List;
 public class Bill extends BaseEntity{
     private Instant exitTime;
     private int amount;
-    private String ticketId;
+    @OneToOne
+    @JoinColumn(name = "ticket_id")
+    private Ticket ticket;
+    @ManyToOne
+    @JoinColumn(name = "operator_id")
     private Operator operator;
+    @Enumerated(EnumType.STRING)
     private BillStatus billStatus;
+    @OneToMany(mappedBy = "bill", cascade = CascadeType.ALL)
     private List<Payment> payments;
 }

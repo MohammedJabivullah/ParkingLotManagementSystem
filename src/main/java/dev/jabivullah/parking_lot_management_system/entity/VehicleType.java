@@ -1,6 +1,6 @@
 package dev.jabivullah.parking_lot_management_system.entity;
 
-public enum VechicleType {
-    SEDAN,
-    SUV
+public enum VehicleType {
+    TWO_WHEELER,
+    FOUR_WHEELER
 }
