@@ -10,9 +10,7 @@ import java.time.Instant;
 @Setter
 public class TicketResponceDto {
     private String ticketId;
-    private String vechicleNumber;
-    private Instant time;
-    private String gateId;
-    private String operaterId;
-    private ParkingSpot parkingSpot;
+    private String time;
+    private int spotNumber;
+    private int floorNumber;
 }

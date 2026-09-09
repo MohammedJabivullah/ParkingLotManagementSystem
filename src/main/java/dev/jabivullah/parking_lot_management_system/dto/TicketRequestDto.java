@@ -11,10 +11,9 @@ import java.time.Instant;
 @Setter
 public class TicketRequestDto {
     private String vechicleNumber;
-    private String ownerName;
     private VehicleType vechicleType;
-    private String gateNumber;
-    private Long operatorId;
+    private String gateId;
+    private String operatorId;
 }
 
 /*

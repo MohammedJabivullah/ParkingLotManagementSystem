@@ -15,11 +15,9 @@ public class TicketServiceImpl implements TicketService{
     @Autowired
     VehicleRepository vehicleRepository;
 
+
     @Override
     public TicketResponceDto creatTicket(TicketRequestDto ticketRequestDto) {
-
-        private static final DateTimeFormatter dateTimeFormat;
-        dateTimeFormat = DateTimeFormatter.ofPattern("yyyyMMddHHmmss").withZone(ZoneOffset.UTC);
         // creates a uniqe ticket id by using Time, Vehicle No., GateId, OperaterId
 
         // find Vehicle from Repository or Create the vehicle (if not present)

@@ -22,5 +22,5 @@ public class ParkingSpot extends BaseEntity{
     @Enumerated(EnumType.STRING)
     @CollectionTable(name = "parking_spot_supported_vehicle_types", joinColumns = @JoinColumn(name = "parking_spot_id"))
     @Column(name = "vehicle_type")
-    private List<VehicleType> supportedVechicleTypes;
+    private VehicleType supportedVechicleType;
 }

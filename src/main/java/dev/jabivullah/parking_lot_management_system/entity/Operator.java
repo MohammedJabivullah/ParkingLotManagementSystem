@@ -11,4 +11,5 @@ public class Operator extends BaseEntity{
     private String name;
     private String phoneNumber;
     private Long empId;
+    private String operatorId;
 }

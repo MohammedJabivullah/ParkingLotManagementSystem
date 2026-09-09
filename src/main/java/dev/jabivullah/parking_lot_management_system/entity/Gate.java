@@ -8,7 +8,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Gate extends BaseEntity{
-    private String gateNumber;
+    private String gateCode;
     @Enumerated(EnumType.STRING)
     private GateType gateType;
     @Enumerated(EnumType.STRING)

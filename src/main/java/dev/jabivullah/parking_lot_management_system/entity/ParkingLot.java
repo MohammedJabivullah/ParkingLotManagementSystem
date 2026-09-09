@@ -14,11 +14,6 @@ public class ParkingLot extends BaseEntity{
     private List<ParkingFloor> parkingFloors;
     @OneToMany(mappedBy = "parkingLot", cascade = CascadeType.ALL)
     private List<Gate> gates;
-    @ElementCollection(targetClass = VehicleType.class)
-    @Enumerated(EnumType.STRING)
-    @CollectionTable(name = "parking_lot_supported_vehicle_type", joinColumns = @JoinColumn(name = "parking_lot_id"))
-    @Column(name = "vehicle_type")
-    private List<VehicleType> supportedVechicleTypes;
     @Enumerated(EnumType.STRING)
     private ParkingSpotStatus parkingLotStatus;
 }

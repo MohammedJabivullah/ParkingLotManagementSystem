@@ -19,6 +19,9 @@ public class Bill extends BaseEntity{
     @ManyToOne
     @JoinColumn(name = "operator_id")
     private Operator operator;
+    @ManyToOne
+    @JoinColumn(name = "gate_id")
+    private Gate gate;
     @Enumerated(EnumType.STRING)
     private BillStatus billStatus;
     @OneToMany(mappedBy = "bill", cascade = CascadeType.ALL)
