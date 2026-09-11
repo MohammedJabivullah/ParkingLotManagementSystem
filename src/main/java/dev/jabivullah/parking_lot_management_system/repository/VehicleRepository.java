@@ -5,9 +5,10 @@ import dev.jabivullah.parking_lot_management_system.entity.Vehicle;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.Optional;
 import java.util.UUID;
 
 @Repository
 public interface VehicleRepository extends JpaRepository<Vehicle, UUID> {
-    Vehicle findByNumber(String number);
+    Optional<Vehicle> findByNumber(String number);
 }

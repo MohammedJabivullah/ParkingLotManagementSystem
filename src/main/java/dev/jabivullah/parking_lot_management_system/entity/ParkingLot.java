@@ -10,6 +10,7 @@ import java.util.List;
 @Setter
 @Entity
 public class ParkingLot extends BaseEntity{
+    private String parkingLotCode;
     @OneToMany(mappedBy = "parkingLot", cascade = CascadeType.ALL)
     private List<ParkingFloor> parkingFloors;
     @OneToMany(mappedBy = "parkingLot", cascade = CascadeType.ALL)

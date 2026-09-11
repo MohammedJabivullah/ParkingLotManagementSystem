@@ -7,7 +7,6 @@ public class VehicleMapper {
     public static Vehicle vehicleToEntity(TicketRequestDto ticketRequestDto){
         Vehicle vehicle = new Vehicle();
         vehicle.setNumber(ticketRequestDto.getVechicleNumber());
-        vehicle.setOwnerName(ticketRequestDto.getOwnerName());
         vehicle.setVehicleType(ticketRequestDto.getVechicleType());
         return vehicle;
     }
