@@ -9,7 +9,7 @@ import java.util.List;
 @Setter
 @Entity
 public class ParkingSpot extends BaseEntity{
-    private int spotNumber;
+    private String spotCode;
 
     @ManyToOne
     @JoinColumn(name = "parking_floor_id")

@@ -1,16 +1,22 @@
 package dev.jabivullah.parking_lot_management_system.dto;
 
-import dev.jabivullah.parking_lot_management_system.entity.ParkingSpot;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.time.Instant;
-
 @Getter
 @Setter
-public class TicketResponceDto {
+public class TicketResponseDto {
     private String ticketId;
-    private String time;
+    private String dateTime;
     private int spotNumber;
     private int floorNumber;
 }
+/*
+Response JSON
+{
+  "ticketId": .....,
+  "dateTime": 14-09-2026 20:01:01,
+  "spotNumber": ...,
+  "floorNumber": ..,
+}
+ */

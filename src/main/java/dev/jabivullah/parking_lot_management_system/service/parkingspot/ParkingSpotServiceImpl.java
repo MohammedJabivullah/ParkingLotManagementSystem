@@ -1,14 +1,12 @@
-package dev.jabivullah.parking_lot_management_system.service;
+package dev.jabivullah.parking_lot_management_system.service.parkingspot;
 
 import dev.jabivullah.parking_lot_management_system.entity.*;
+import dev.jabivullah.parking_lot_management_system.exception.ticketException.ParkingSpotNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import java.util.HashMap;
 import java.util.List;
 
 public class ParkingSpotServiceImpl {
-    @Autowired
-    private ParkingLot parkingLot;
     @Autowired
     private List<ParkingFloor> parkingFloors;
     @Autowired
@@ -24,6 +22,6 @@ public class ParkingSpotServiceImpl {
                 }
             }
         }
-        return new parkingSpotNotFoundException();
+        throw new ParkingSpotNotFoundException(vehicleType+" Parking Spots Are Full!");
     }
 }

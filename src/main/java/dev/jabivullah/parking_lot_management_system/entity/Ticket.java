@@ -14,8 +14,9 @@ import java.util.UUID;
 @Setter
 @Entity
 public class Ticket extends BaseEntity{
-    private String ticketId;
+    private String ticketCode;
     private Instant entryTime;
+    private String date;
     @ManyToOne
     @JoinColumn(name = "vehicle_id")
     private Vehicle vehicle;
