@@ -7,15 +7,17 @@ import lombok.Setter;
 @Setter
 public class TicketResponseDto {
     private String ticketId;
-    private String dateTime;
-    private int spotNumber;
+    private String date;
+    private String time;
+    private String parkingSpotCode;
     private int floorNumber;
 }
 /*
 Response JSON
 {
   "ticketId": .....,
-  "dateTime": 14-09-2026 20:01:01,
+  "dateTime": "14/09/2026",
+  "time":  "20:01:01",
   "spotNumber": ...,
   "floorNumber": ..,
 }

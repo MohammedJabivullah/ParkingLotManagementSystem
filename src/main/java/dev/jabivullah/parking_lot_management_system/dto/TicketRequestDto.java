@@ -23,7 +23,7 @@ JSON
   "ownerName": "Kuro",
   "vechicleType": "SUV",  (->enum)
   "time": "2026-09-02T11:40:10.123456Z",  (->yyyy-MM-dd'T'HH:mm:ss.SSSX)
-  "gateId": "FAG2",  (-> F-Floar A-floar alphabet and G-Gate 2-gate number)
+  "gateId": "L1G2",  (-> F-Floar A-floar alphabet and G-Gate 2-gate number)
   "opeeratorId": 748373
 }
 */
